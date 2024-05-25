@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="{% static 'css/mediaqueries.css' %}"/>
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Corcimari Viorel</div>
+      <div class="logo">Do Joe</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -22,7 +23,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">Corcimari Viorel</div>
+      <div class="logo">Do Joe</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -39,11 +40,11 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./static/img/profile-pic.png" alt="Corcimari Viorel profile picture" />
+        <img src="./static/img/profile-pic.png" alt="Do Joe profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Viorel</h1>
+        <h1 class="title">Joe</h1>
         <p class="section__text__p2">Software Support Engineer</p>
         <div class="btn-container">
           <button
@@ -376,8 +377,8 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 Corcimari Viorel. All Rights Reserved.</p>
+      <p>Copyright &#169; 2023 Do Joe. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="static/js/script.js"></script>
   </body>
 </html>
