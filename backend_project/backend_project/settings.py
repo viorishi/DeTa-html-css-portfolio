@@ -33,17 +33,17 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"] #ProjectSpecific
 
 REST_FRAMEWORK = { #ProjectSpecific
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permission.isAuthenticated",
-    ],
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
 }
 
 SIMPLE_JWT = { #ProjectSpecific
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30), # used to access different routs
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1), # used to get new access token
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30), # used to access different routs
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1), # used to get new access token
 } 
 
 
@@ -145,5 +145,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWS_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True #ProjectSpecific
+CORS_ALLOWS_CREDENTIALS = True #ProjectSpecific

@@ -1,7 +1,8 @@
-from django.contrib.auth.models import User
-from rest_framework import serializers
+from django.contrib.auth.models import User #ProjectSpecific
+from rest_framework import serializers #ProjectSpecific
+from .models import Note
 
-class UserSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer): #ProjectSpecific
     class Meta:
         model = User
         fields = ["id","username","password"]
@@ -11,3 +12,8 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         return user
     
+class NoteSerializer(serializers.ModelSerializer): #ProjectSpecific
+    class Meta:
+        model = Note
+        fields = ["id","title","content","created_at","author"]
+        extra_kwargs = {"author": {"readonly": True}}
